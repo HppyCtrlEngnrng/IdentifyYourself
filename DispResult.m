@@ -51,8 +51,8 @@ function P = DispResult(hf, y, u)
     title(ha_comp, 'Time Response', 'FontSize', 24, 'Color', [1 1 1], 'FontName', 'Times New Roman');
     ylabel('output [-]', 'FontSize', 18);
     xlabel('time [s]', 'FontSize', 18);
-    legend(ha_comp, 'input', 'output', 'identification result', 'Location', 'southwest', 'TextColor', [1 1 1], 'Box', 'off', 'FontSize', 10);
+    legend(ha_comp, 'input', 'output', 'identification result', 'Location', 'north', 'TextColor', [1 1 1], 'Box', 'off', 'FontSize', 10, 'NumColumns', 3);
     
-    print(hf, './temp_pict/freqresp', '-dpng');
-    print(hf_comp, './temp_pict/timeresp', '-dpng');
+    print(hf, './freqresp', '-dpng');
+    print(hf_comp, './timeresp', '-dpng');
 end
